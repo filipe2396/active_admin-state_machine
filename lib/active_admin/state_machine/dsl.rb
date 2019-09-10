@@ -32,7 +32,7 @@ module ActiveAdmin
                              ["state_action_#{action}", { only: :show }]
                            end
         action_item(*action_item_args) do
-          if resource.send("can_#{action}?") && authorized?(options[:permission], resource)
+          if resource.send("may_#{action}?") && authorized?(options[:permission], resource)
             path = resource_path << "/#{action}"
             label = I18n.t("#{plural}.#{action}.label", default: action.to_s.titleize)
 

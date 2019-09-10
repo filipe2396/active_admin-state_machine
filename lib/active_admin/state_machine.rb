@@ -1,5 +1,5 @@
 require 'active_admin'
-require 'state_machine'
+require 'aasm'
 
 require 'active_admin/state_machine/dsl'
 
