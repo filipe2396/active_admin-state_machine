@@ -24,7 +24,7 @@ module ActiveAdmin
           confirmation = ->{ I18n.t(:confirm, scope: "#{plural}.#{action}", default: default) }
         end
 
-        http_verb = options.fetch :http_verb, :put
+        http_verb = options.fetch :http_verb, :patch
 
         action_item_args = if ActiveAdmin::VERSION.start_with?('0.')
                              [{ only: :show }]
